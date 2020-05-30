@@ -1,0 +1,43 @@
+<p>orden-despacho-edicion works!</p>
+<mat-card>Ingrese los datos de la Orden de Despacho</mat-card>
+
+<br>
+
+<form class="example-container" [formGroup]="form" (ngSubmit)="operar()" #frmOrdenDespacho="ngForm">
+
+  <div [hidden]="true">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="ID" required formControlName="id">
+    </mat-form-field>
+  </div>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="numeroOrden" required formControlName="numeroOrden">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="prioridad" required formControlName="prioridad">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="AWB_BL" required formControlName="AWB_BL">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="AWB_BL_Origen" required formControlName="AWB_BL_Origen">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="origen" required formControlName="origen">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="cantidadSeries" required formControlName="cantidadSeries">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="cantidadBultos" required formControlName="cantidadBultos">
+  </mat-form-field>
+  <!-- <button mat-raised-button color="primary" type="submit" [disabled]="frmCarrera.invalid">-->
+  <button mat-button color="accent" type="submit" >
+    <mat-icon>done</mat-icon>
+    <span >Aceptar</span>
+  </button>
+  <button mat-button color="warn" routerLink='/orden-despacho' type="button">
+    <mat-icon>close</mat-icon>
+    <span>Cancelar</span>
+  </button>
+</form>

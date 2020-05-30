@@ -1,0 +1,99 @@
+<div class="example-container">
+    <mat-toolbar color="primary" class="example-toolbar">
+        <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
+            <mat-icon *ngIf="sidenav.opened">close</mat-icon>
+        </button>
+
+        <h1 class="example-app-name">PathOrder</h1>
+
+        <span class="example-spacer"></span>
+
+       <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+
+      <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink="/perfil">
+                <mat-icon>account_box</mat-icon>
+                <span>Mi Perfil</span>
+            </button>
+            <button mat-menu-item routerLink="/login" (click)="sidenav.opened = false">
+                <mat-icon>exit_to_app</mat-icon>
+                <span>Cerrar Sesión</span>
+            </button>
+        </mat-menu> 
+    </mat-toolbar>
+
+
+    <mat-sidenav-container class="example-sidenav-container" >
+        <mat-sidenav #sidenav mode="side" style="width: 200px" >         
+
+
+
+            <mat-divider></mat-divider>
+            <button mat-menu-item (click)="sidenav.toggle()" routerLink="/canal" style="cursor: pointer" >
+                <mat-icon>assignment_late</mat-icon>
+                <span>Canal</span>
+            </button>
+
+
+            <mat-divider></mat-divider>
+            <button mat-menu-item (click)="sidenav.toggle()" routerLink="/tipodespacho" style="cursor: pointer" >
+                <mat-icon>list</mat-icon>
+                <span>Tipo Despachos</span>
+            </button>
+
+            <mat-divider></mat-divider>
+            <button mat-menu-item (click)="sidenav.toggle()" routerLink="/dam" style="cursor: pointer" >
+                <mat-icon>note_add</mat-icon>
+                <span>DAM</span>
+            </button>
+
+            <mat-divider></mat-divider>
+            <button mat-menu-item (click)="sidenav.toggle()" routerLink="/proveedor" style="cursor: pointer" >
+                <mat-icon>person_pin</mat-icon>
+                <span>Proveedores</span>
+            </button>   
+
+             <mat-divider></mat-divider>
+            <button mat-menu-item (click)="sidenav.toggle()" routerLink="/mercaderia" style="cursor: pointer" >
+                <mat-icon>style</mat-icon>
+                <span>Mercaderias</span>
+            </button>   
+
+             <mat-divider></mat-divider>
+            <button mat-menu-item (click)="sidenav.toggle()" routerLink="/factura" style="cursor: pointer" >
+                <mat-icon>insert_drive_file</mat-icon>
+                <span>Facturas</span>
+            </button>   
+
+             <mat-divider></mat-divider>
+            <button mat-menu-item (click)="sidenav.toggle()" routerLink="/bulto" style="cursor: pointer" >
+                <mat-icon>insert_drive_file</mat-icon>
+                <span>Bultos</span>
+            </button>   
+
+             <mat-divider></mat-divider>
+            <button mat-menu-item (click)="sidenav.toggle()" routerLink="/orden-despacho" style="cursor: pointer" >
+                <mat-icon>insert_drive_file</mat-icon>
+                <span>Orden de Despacho</span>
+            </button>   
+
+
+  <mat-divider></mat-divider>
+            <button mat-menu-item (click)="sidenav.toggle()" routerLink="/agenteaduanero" style="cursor: pointer" >
+                <mat-icon>insert_drive_file</mat-icon>
+                <span>Agente Aduanero</span>
+            </button>   
+            
+                   
+        </mat-sidenav>
+<img src=”https://domain.com/original-image.png” [fallback]=”variableWithEmergencyImage” />
+        <mat-sidenav-content>
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+
+    </mat-sidenav-container>
+    
+</div>

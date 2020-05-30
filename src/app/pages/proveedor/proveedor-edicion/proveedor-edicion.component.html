@@ -1,0 +1,30 @@
+<mat-card>Ingrese los datos del Proveedor</mat-card>
+
+<br>
+
+<form class="example-container" [formGroup]="form" (ngSubmit)="operar()" #frmProveedor="ngForm">
+
+  <div [hidden]="true">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="ID" required formControlName="id">
+    </mat-form-field>
+  </div>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Nombre" required formControlName="nombre">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="RUC" required formControlName="Ruc">
+  </mat-form-field>
+  
+  <!-- <button mat-raised-button color="primary" type="submit" [disabled]="frmCarrera.invalid">-->
+  <button mat-button color="accent" type="submit" >
+    <mat-icon>done</mat-icon>
+    <span >Aceptar</span>
+  </button>
+  <button mat-button color="warn" routerLink='/proveedor' type="button">
+    <mat-icon>close</mat-icon>
+    <span>Cancelar</span>
+  </button>
+</form>

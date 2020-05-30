@@ -1,0 +1,30 @@
+.crud-card {
+	min-width: 550px;
+	margin: 20px;
+	padding-bottom: 25px;
+}
+.crud-card-content {
+	display: flex;
+    flex-direction: column;
+	min-width: 500px;
+	padding: 8px 24px 0;
+}
+.crud-card-actions {
+	display: flex;
+	justify-content: center;
+}
+  
+.crud-card-content-search {
+	min-height: 64px;
+}
+  
+.mat-form-field {
+	font-size: 14px;
+	width: 50%;
+}
+  
+.mat-table {
+	overflow: auto;
+	max-height: 500px;
+}
+  
