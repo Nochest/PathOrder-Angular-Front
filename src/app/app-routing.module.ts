@@ -11,8 +11,8 @@ import { ProveedorComponent } from './pages/proveedor/proveedor.component';
 import { ProveedorEdicionComponent } from './pages/proveedor/proveedor-edicion/proveedor-edicion.component';
 import { MercaderiaComponent } from './pages/mercaderia/mercaderia.component';
 import { MercaderiaEdicionComponent } from './pages/mercaderia/mercaderia-edicion/mercaderia-edicion.component';
-import { OrdenDespachoComponent } from './pages/orden-despacho/orden-despacho.component';
-import { OrdenDespachoEdicionComponent } from './pages/orden-despacho/orden-despacho-edicion/orden-despacho-edicion.component';
+import { OrdenDespachoComponent } from './pages/ordendespacho/ordendespacho.component';
+import { OrdenDespachoEdicionComponent } from './pages/ordendespacho/ordendespacho-edicion/ordendespacho-edicion.component';
 
 
 
@@ -38,7 +38,7 @@ const routes: Routes = [
   {path:'nuevo', component:MercaderiaEdicionComponent},
   {path:'edicion/:id', component:MercaderiaEdicionComponent}
 ]},
-{path:'orden-despacho', component:OrdenDespachoComponent, children:[
+{path:'ordendespacho', component:OrdenDespachoComponent, children:[
   {path:'nuevo', component:OrdenDespachoEdicionComponent},
   {path:'edicion/:id', component:OrdenDespachoEdicionComponent}
 ]}

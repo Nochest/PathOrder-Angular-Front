@@ -17,8 +17,8 @@ import { ProveedorComponent } from './pages/proveedor/proveedor.component';
 import { ProveedorEdicionComponent } from './pages/proveedor/proveedor-edicion/proveedor-edicion.component';
 import { MercaderiaComponent } from './pages/mercaderia/mercaderia.component';
 import { MercaderiaEdicionComponent } from './pages/mercaderia/mercaderia-edicion/mercaderia-edicion.component';
-import { OrdenDespachoComponent } from './pages/orden-despacho/orden-despacho.component';
-import { OrdenDespachoEdicionComponent } from './pages/orden-despacho/orden-despacho-edicion/orden-despacho-edicion.component';
+import { OrdenDespachoComponent } from './pages/ordendespacho/ordendespacho.component';
+import { OrdenDespachoEdicionComponent } from './pages/ordendespacho/ordendespacho-edicion/ordendespacho-edicion.component';
 import { FacturasComponent } from './pages/facturas/facturas.component';
 import { FacturasEdicionComponent } from './pages/facturas/facturas-edicion/facturas-edicion.component';
 

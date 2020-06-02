@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { OrdenDespacho } from 'src/app/_model/orden-despacho';
 import { MatTableDataSource } from '@angular/material';
-import { OrdenDespachoService } from 'src/app/_service/orden-despacho.service';
+import { OrdenDespacho } from 'src/app/_model/ordendespacho';
+import { OrdenDespachoService } from 'src/app/_service/ordendespacho.service';
 
 @Component({
-  selector: 'app-orden-despacho',
-  templateUrl: './orden-despacho.component.html',
-  styleUrls: ['./orden-despacho.component.css']
+  selector: 'app-ordendespacho',
+  templateUrl: './ordendespacho.component.html',
+  styleUrls: ['./ordendespacho.component.css']
 })
-export class OrdenDespachoComponent implements OnInit {
+export class OrdenDespachoComponent implements OnInit 
+{
   dataSource: MatTableDataSource<OrdenDespacho>;
-	displayedColumns = ['id', 'numeroOrden', 'prioridad','AWB_BL','AWB_BL_Origen','origen','cantidadBultos'];
+	displayedColumns = ['id', 'numeroOrden', 'prioridad','origen', 'cantidadBultos', 'observacion', 'acciones'];
   constructor(private OrdenDespachoService: OrdenDespachoService) { }
 
   ngOnInit() {
@@ -30,8 +31,8 @@ export class OrdenDespachoComponent implements OnInit {
   eliminar(id:number){
 		this.OrdenDespachoService.eliminar(id).subscribe(
 			data => {
-			  this.OrdenDespachoService.listar().subscribe(Mercaderias =>{
-				this.OrdenDespachoService.OrdenDespachoCambio.next(Mercaderias);
+			  this.OrdenDespachoService.listar().subscribe(Ordenes =>{
+				this.OrdenDespachoService.OrdenDespachoCambio.next(Ordenes);
 				this.OrdenDespachoService.mensajeCambio.next('Se Elimino');
 			  })
 			}

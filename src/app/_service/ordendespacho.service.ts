@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HOST } from '../_shared/var.constant';
-import {OrdenDespacho} from '../_model/orden-despacho';
+import {OrdenDespacho} from '../_model/ordendespacho';
 import { HttpClient } from '@angular/common/http';
 import { Subject, from } from 'rxjs';
 @Injectable({
